@@ -25,6 +25,7 @@ namespace Camion
         public MainWindow()
         {
             InitializeComponent();
+            vp.Background = new SolidColorBrush(Color.FromRgb(128, 0, 0));
             redcamion = new Camion1(250, 125, 25);
             bluecamion = new Camion1(275, 100, 35);
             write();
@@ -54,9 +55,13 @@ namespace Camion
         public void sw_Click(object sender, RoutedEventArgs e)
         {
             if(swa == 0)
-            { swa = 1; }
+            { swa = 1;
+                vp.Background = new SolidColorBrush(Color.FromRgb(0, 0, 128));
+            }
             else
-            { swa = 0; }
+            { swa = 0;
+                vp.Background = new SolidColorBrush(Color.FromRgb(128, 0, 0));
+            }
             write();
         }
 
@@ -65,10 +70,10 @@ namespace Camion
             switch(swa)
             {
                 case 0:
-                    vp.Text = "Kamion červenej \nMax váha: " + redcamion.maxcarry + "\nMax palivo: " + redcamion.maxfuel + "\nSpotřeba: " + redcamion.consum + "\nVzdaálenost: " + redcamion.consum + "\nPalivo: " + redcamion.curentfuel + "\nNáklad: " + redcamion.curentcarry;
+                    vp.Text = "Kamion: červenej \nMax váha: " + redcamion.maxcarry + "\nMax palivo: " + redcamion.maxfuel + "\nSpotřeba: " + redcamion.consum + "\nVzdaálenost: " + redcamion.consum + "\nPalivo: " + redcamion.curentfuel + "\nNáklad: " + redcamion.curentcarry;
                     break;
                 case 1:
-                    vp.Text = "Kamion modrej \nMax váha: " + bluecamion.maxcarry + "\nMax palivo: " + bluecamion.maxfuel + "\nSpotřeba: " + bluecamion.consum + "\nVzdaálenost: " + bluecamion.consum + "\nPalivo: " + bluecamion.curentfuel + "\nNáklad: " + bluecamion.curentcarry;
+                    vp.Text = "Kamion: modrej \nMax váha: " + bluecamion.maxcarry + "\nMax palivo: " + bluecamion.maxfuel + "\nSpotřeba: " + bluecamion.consum + "\nVzdaálenost: " + bluecamion.consum + "\nPalivo: " + bluecamion.curentfuel + "\nNáklad: " + bluecamion.curentcarry;
                     break;
             }
 
@@ -79,11 +84,47 @@ namespace Camion
             switch (swa)
             {
                 case 0:
-                    try { redcamion.curentfuel = int.Parse(tnkb.Text); }
+                    try { redcamion.tanko(int.Parse(tnkb.Text)); }
                     catch { MessageBox.Show("Napiš tam něco normálního, pls!"); };
-                
-                
+                    break;
+                case 1:
+                    try { bluecamion.tanko(int.Parse(tnkb.Text)); }
+                    catch { MessageBox.Show("Napiš tam něco normálního, pls!"); };
+                    break;                
             }
-        }       
+            write();
+        }
+
+        private void nakl_Click(object sender, RoutedEventArgs e)
+        {
+            switch (swa)
+            {
+                case 0:
+                    try { redcamion.naklo(int.Parse(nakla.Text)); }
+                    catch { MessageBox.Show("Napiš tam něco normálního, pls!"); };
+                    break;
+                case 1:
+                    try { bluecamion.naklo(int.Parse(nakla.Text)); }
+                    catch { MessageBox.Show("Napiš tam něco normálního, pls!"); };
+                    break;
+            }
+            write();
+        }
+
+        private void vykldd_Click(object sender, RoutedEventArgs e)
+        {
+            switch (swa)
+            {
+                case 0:
+                    try { redcamion.vyklo(int.Parse(vykld.Text)); }
+                    catch { MessageBox.Show("Napiš tam něco normálního, pls!"); };
+                    break;
+                case 1:
+                    try { bluecamion.vyklo(int.Parse(vykld.Text)); }
+                    catch { MessageBox.Show("Napiš tam něco normálního, pls!"); };
+                    break;
+            }
+            write();
+        }
     }
 }

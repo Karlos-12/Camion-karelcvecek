@@ -31,9 +31,9 @@ namespace Camion
 
         public void GO(int distance)
         {
-            if ((((distance / 100 * consum)/100) * (100 + (curentcarry/(maxcarry/100)))) < curentfuel)
+            if ((((distance / 100 * consum)) + (25* (curentcarry/maxcarry))) < curentfuel)
             {
-                curentfuel = (((distance / 100 * consum) / 100) * (100 + (curentcarry / (maxcarry / 100))));
+                curentfuel -= ((((distance / 100) * consum)) + (25 *(curentcarry / maxcarry)));
             }
             else
             {
@@ -41,6 +41,41 @@ namespace Camion
             }
         }
 
+        public void tanko(int litr)
+        {
+            if(curentfuel + litr > maxfuel)
+            {
+                MessageBox.Show("Přeteklo to more!");
+                curentfuel = maxfuel;
+            }
+            else
+            {
+                curentfuel += litr;
+            }
+        }
 
+        public void naklo(int nakld)
+        {
+            if(maxcarry < nakld + curentcarry)
+            {
+                MessageBox.Show("More ti praskne náprava!");
+            }
+            else
+            {
+                curentcarry += nakld;
+            }
+        }
+        
+        public void vyklo(int vkld)
+        {
+            if(vkld > curentcarry)
+            {
+                MessageBox.Show("A co chceč jako vykládat?");
+            }
+            else
+            {
+                curentcarry -= vkld;
+            }
+        }
     }
 }
