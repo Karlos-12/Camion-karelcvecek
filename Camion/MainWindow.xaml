@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Camion"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Background="#FF1A1A1A">
-    <Grid>
+        Title="MainWindow" Height="540" Width="860" Background="#FF1A1A1A" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+    <Grid Height="434" VerticalAlignment="Center" HorizontalAlignment="Center" Width="800" Margin="0,0,60,0">
         <Button x:Name="Jet" Content="Travell" HorizontalAlignment="Left" Height="94" Margin="657,10,0,0" VerticalAlignment="Top" Width="133" Background="#FF3D3D3D" Foreground="White" BorderBrush="{x:Null}" IsDefault="True" FontSize="32" FontWeight="Bold" FontFamily="Consolas" Click="Jet_Click"/>
         <Button x:Name="tnk" Content="Tank" HorizontalAlignment="Left" Height="94" Margin="657,115,0,0" VerticalAlignment="Top" Width="133" Background="#FF3D3D3D" Foreground="White" BorderBrush="{x:Null}" IsDefault="True" FontSize="32" FontWeight="Bold" FontFamily="Consolas" Click="tnk_Click"/>
         <Button x:Name="nakl" Content="Add wh" HorizontalAlignment="Left" Height="95" Margin="657,218,0,0" VerticalAlignment="Top" Width="133" Background="#FF3D3D3D" Foreground="White" BorderBrush="{x:Null}" IsDefault="True" FontSize="32" FontWeight="Bold" FontFamily="Consolas" Click="nakl_Click"/>

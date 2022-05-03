@@ -70,10 +70,10 @@ namespace Camion
             switch(swa)
             {
                 case 0:
-                    vp.Text = "Kamion: červenej \nMax váha: " + redcamion.maxcarry + "\nMax palivo: " + redcamion.maxfuel + "\nSpotřeba: " + redcamion.consum + "\nVzdaálenost: " + redcamion.consum + "\nPalivo: " + redcamion.curentfuel + "\nNáklad: " + redcamion.curentcarry;
+                    vp.Text = "Kamion: červenej \nMax váha: " + redcamion.maxcarry + "\nMax palivo: " + redcamion.maxfuel + "\nSpotřeba: " + redcamion.consum + "\nVzdálenost: " + redcamion.consum + "\nPalivo: " + redcamion.curentfuel + "\nNáklad: " + redcamion.curentcarry;
                     break;
                 case 1:
-                    vp.Text = "Kamion: modrej \nMax váha: " + bluecamion.maxcarry + "\nMax palivo: " + bluecamion.maxfuel + "\nSpotřeba: " + bluecamion.consum + "\nVzdaálenost: " + bluecamion.consum + "\nPalivo: " + bluecamion.curentfuel + "\nNáklad: " + bluecamion.curentcarry;
+                    vp.Text = "Kamion: modrej \nMax váha: " + bluecamion.maxcarry + "\nMax palivo: " + bluecamion.maxfuel + "\nSpotřeba: " + bluecamion.consum + "\nVzdálenost: " + bluecamion.consum + "\nPalivo: " + bluecamion.curentfuel + "\nNáklad: " + bluecamion.curentcarry;
                     break;
             }
 
