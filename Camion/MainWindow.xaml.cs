@@ -20,13 +20,14 @@ namespace Camion
     /// </summary>
     public partial class MainWindow : Window
     {
-        Camion redcamion;
-        Camion bluecamion;
+        Camion1 redcamion;
+        Camion1 bluecamion;
         public MainWindow()
         {
             InitializeComponent();
-            redcamion = new Camion(250, 125, 25);
-            bluecamion = new Camion(275, 100, 35);
+            redcamion = new Camion1(250, 125, 25);
+            bluecamion = new Camion1(275, 100, 35);
+            write();
         }
 
         private void Jet_Click(object sender, RoutedEventArgs e)
@@ -56,11 +57,33 @@ namespace Camion
             { swa = 1; }
             else
             { swa = 0; }
+            write();
         }
 
         public void write()
         {
+            switch(swa)
+            {
+                case 0:
+                    vp.Text = "Kamion červenej \nMax váha: " + redcamion.maxcarry + "\nMax palivo: " + redcamion.maxfuel + "\nSpotřeba: " + redcamion.consum + "\nVzdaálenost: " + redcamion.consum + "\nPalivo: " + redcamion.curentfuel + "\nNáklad: " + redcamion.curentcarry;
+                    break;
+                case 1:
+                    vp.Text = "Kamion modrej \nMax váha: " + bluecamion.maxcarry + "\nMax palivo: " + bluecamion.maxfuel + "\nSpotřeba: " + bluecamion.consum + "\nVzdaálenost: " + bluecamion.consum + "\nPalivo: " + bluecamion.curentfuel + "\nNáklad: " + bluecamion.curentcarry;
+                    break;
+            }
 
         }
+
+        private void tnk_Click(object sender, RoutedEventArgs e)
+        {
+            switch (swa)
+            {
+                case 0:
+                    try { redcamion.curentfuel = int.Parse(tnkb.Text); }
+                    catch { MessageBox.Show("Napiš tam něco normálního, pls!"); };
+                
+                
+            }
+        }       
     }
 }

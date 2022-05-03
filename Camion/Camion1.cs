@@ -7,7 +7,7 @@ using System.Windows;
 
 namespace Camion
 {
-    internal class Camion
+    internal class Camion1
     {
         public int maxcarry { get;}
         public int maxfuel { get;}
@@ -19,7 +19,7 @@ namespace Camion
         public int curentcarry { get; set; }
         public int curentfuel { get; set; }
 
-        public Camion(int nosnost,int velnadr,int spotreba)
+        public Camion1(int nosnost,int velnadr,int spotreba)
         {
             maxcarry = nosnost;
             maxfuel = velnadr;
