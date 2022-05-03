@@ -1,0 +1,21 @@
+﻿<Window x:Class="Camion.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Camion"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Background="#FF1A1A1A">
+    <Grid>
+        <Button x:Name="Jet" Content="Travell" HorizontalAlignment="Left" Height="94" Margin="657,10,0,0" VerticalAlignment="Top" Width="133" Background="#FF3D3D3D" Foreground="White" BorderBrush="{x:Null}" IsDefault="True" FontSize="32" FontWeight="Bold" FontFamily="Consolas" Click="Jet_Click"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="94" Margin="657,115,0,0" VerticalAlignment="Top" Width="133" Background="#FF3D3D3D" Foreground="White" BorderBrush="{x:Null}" IsDefault="True" FontSize="32" FontWeight="Bold" FontFamily="Consolas"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="95" Margin="657,218,0,0" VerticalAlignment="Top" Width="133" Background="#FF3D3D3D" Foreground="White" BorderBrush="{x:Null}" IsDefault="True" FontSize="32" FontWeight="Bold" FontFamily="Consolas"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="94" Margin="657,323,0,0" VerticalAlignment="Top" Width="133" Background="#FF3D3D3D" Foreground="White" BorderBrush="{x:Null}" IsDefault="True" FontSize="32" FontWeight="Bold" FontFamily="Consolas"/>
+        <TextBox x:Name="jetb" HorizontalAlignment="Left" Height="94" Margin="485,10,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" Width="167" Background="#FF2E2E2E" Foreground="White" FontSize="32" FontWeight="Bold" FontFamily="Consolas" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <TextBox HorizontalAlignment="Left" Height="94" Margin="485,115,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="167" Background="#FF2E2E2E" Foreground="White" FontSize="32" FontWeight="Bold" FontFamily="Consolas" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <TextBox HorizontalAlignment="Left" Height="94" Margin="485,219,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="167" Background="#FF2E2E2E" Foreground="White" FontSize="32" FontWeight="Bold" FontFamily="Consolas" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <TextBox HorizontalAlignment="Left" Height="94" Margin="485,323,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="167" Background="#FF2E2E2E" Foreground="White" FontSize="32" FontWeight="Bold" FontFamily="Consolas" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Button x:Name="sw" Content="Switch" HorizontalAlignment="Center" Height="407" Margin="0,10,0,0" VerticalAlignment="Top" Width="132" Background="#FF3D3D3D" Foreground="White" BorderBrush="{x:Null}" IsDefault="True" FontSize="32" FontWeight="Bold" FontFamily="Consolas" Click="sw_Click"/>
+
+    </Grid>
+</Window>
