@@ -29,11 +29,12 @@ namespace Camion
             curentfuel = 0;
         }
 
-        public void GO(int distance)
+        public void GO(int distance1)
         {
-            if ((((distance / 100 * consum)) + (25* (curentcarry/maxcarry))) < curentfuel)
+            if ((((distance1 / 100 * consum)) + (25* (curentcarry/maxcarry))) < curentfuel)
             {
-                curentfuel -= ((((distance / 100) * consum)) + (25 *(curentcarry / maxcarry)));
+                curentfuel -= ((((distance1 / 100) * consum)) + (25 *(curentcarry / maxcarry)));
+                distance += distance1;
             }
             else
             {
